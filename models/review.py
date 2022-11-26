@@ -1,16 +1,18 @@
 #!/usr/bin/python3
-
-"""This file defines the Review Model
-It inherits from the BaseModel
-"""
-
 from models.base_model import BaseModel
+from models.place import Place
+from models.user import User
+"""
+Module class: Review
+"""
 
 
 class Review(BaseModel):
-    """The Review Model"""
+    """definition for class Review"""
+    text = ""
+    place_id = ""
+    user_id = ""
 
-    # Attributes
-    place_id: str = ""
-    user_id: str = ""
-    text: str = ""
+    def __init__(self, *args, **kwargs):
+        """ constructor method """
+        super().__init__(self, *args, **kwargs)
